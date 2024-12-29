@@ -82,9 +82,8 @@ export const MovingBorder = ({
   duration?: number;
   rx?: string;
   ry?: string;
-  [key: string]: any;
-}) => {
-  const pathRef = useRef<SVGRectElement | null>(null); // More specific type for pathRef
+} & React.SVGProps<SVGSVGElement>) => { // Use specific type for otherProps
+  const pathRef = useRef<SVGRectElement | null>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
@@ -114,7 +113,7 @@ export const MovingBorder = ({
         className="absolute h-full w-full"
         width="100%"
         height="100%"
-        {...otherProps} // `otherProps` will be typed based on the svg element attributes
+        {...otherProps} // Spread the svg element props
       >
         <rect
           fill="none"
