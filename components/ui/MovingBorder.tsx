@@ -1,5 +1,5 @@
 "use client";
-import React, { JSX, useRef } from "react";
+import React, { useRef } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -10,7 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 
 // Define the type for the `as` prop
-type ButtonComponentProps = React.ComponentProps<"button"> | React.ComponentProps<"div">;
+// type ButtonComponentProps = React.ComponentProps<"button"> | React.ComponentProps<"div">;
 
 export function Button({
   borderRadius = "1.75rem",
