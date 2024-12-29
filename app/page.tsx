@@ -1,4 +1,5 @@
 import Clients from "@/components/Clients";
+import Description from "@/components/Description";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
