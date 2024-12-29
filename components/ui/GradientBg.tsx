@@ -48,10 +48,11 @@ export const BackgroundGradientAnimation = ({
     setIsMounted(true);
   }, []);
 
+  // Safely check if we're in the client-side (browser) environment
+  const isClient = typeof window !== "undefined" && typeof document !== "undefined";
+
   useEffect(() => {
-    // Ensure this runs only on the client-side (after mounting)
-    if (!isMounted) return; // Skip this effect if SSR
-    if (typeof document === "undefined") return; // Check if document is available
+    if (!isClient) return; // Skip the effect if we're not in a client-side environment
 
     // Modify CSS variables only on the client-side
     document.body.style.setProperty(
@@ -71,7 +72,6 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
   }, [
-    isMounted, // Trigger effect only after the component is mounted
     gradientBackgroundStart,
     gradientBackgroundEnd,
     firstColor,
@@ -82,6 +82,7 @@ export const BackgroundGradientAnimation = ({
     pointerColor,
     size,
     blendingValue,
+    isClient, // Include isClient here to avoid running during SSR
   ]);
 
   useEffect(() => {
@@ -112,7 +113,7 @@ export const BackgroundGradientAnimation = ({
     setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
   }, []);
 
-  if (!isMounted) return null; // Return nothing during SSR
+  if (!isMounted || !isClient) return null; // Return nothing during SSR
 
   return (
     <div
