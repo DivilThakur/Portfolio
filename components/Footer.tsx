@@ -2,7 +2,7 @@ import React from 'react'
 import MagicButton from './MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
 import { socialMedia } from '@/data'
-
+import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -30,7 +30,7 @@ const Footer = () => {
                         <div key={profile.id} className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter
                             backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-100 rounded-lg border border-black-300
                         ' >
-                            <img src={profile.img} alt={profile.img} width={20} height={20} />
+                            <Image src={profile.img} alt={profile.img} width={20} height={20} />
                         </div>
                     ))}
                 </div>
