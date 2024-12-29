@@ -49,7 +49,9 @@ export const BackgroundGradientAnimation = ({
   }, []);
 
   useEffect(() => {
-    if (!isMounted) return; // Skip this effect if the component is not mounted (SSR)
+    // Ensure this runs only on the client-side (after mounting)
+    if (!isMounted) return; // Skip this effect if SSR
+    if (typeof document === "undefined") return; // Check if document is available
 
     // Modify CSS variables only on the client-side
     document.body.style.setProperty(
