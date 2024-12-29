@@ -40,7 +40,18 @@ export const BackgroundGradientAnimation = ({
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
 
+  // Track if the component is mounted (client-side rendering)
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
+    // Set the mounted state to true after the first render (client-side)
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return; // Skip this effect if the component is not mounted (SSR)
+
+    // Modify CSS variables only on the client-side
     document.body.style.setProperty(
       "--gradient-background-start",
       gradientBackgroundStart
@@ -58,6 +69,7 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
   }, [
+    isMounted, // Trigger effect only after the component is mounted
     gradientBackgroundStart,
     gradientBackgroundEnd,
     firstColor,
@@ -83,7 +95,7 @@ export const BackgroundGradientAnimation = ({
     }
 
     move();
-  },[tgX, tgY, curX, curY]);
+  }, [tgX, tgY, curX, curY]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
@@ -98,6 +110,8 @@ export const BackgroundGradientAnimation = ({
     setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
   }, []);
 
+  if (!isMounted) return null; // Return nothing during SSR
+
   return (
     <div
       className={cn(
@@ -108,11 +122,7 @@ export const BackgroundGradientAnimation = ({
       <svg className="hidden">
         <defs>
           <filter id="blurMe">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="10"
-              result="blur"
-            />
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
             <feColorMatrix
               in="blur"
               mode="matrix"
