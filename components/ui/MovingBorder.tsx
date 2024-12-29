@@ -9,10 +9,8 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-// Define the type for the `as` prop
-// type ButtonComponentProps = React.ComponentProps<"button"> | React.ComponentProps<"div">;
-
-export function Button({
+// Define the Button component
+export function Button<T extends React.ElementType>({
   borderRadius = "1.75rem",
   children,
   as: Component = "button", // Use React.ElementType for `as`
@@ -24,13 +22,12 @@ export function Button({
 }: {
   borderRadius?: string;
   children: React.ReactNode;
-  as?: React.ElementType; // React.ElementType is more precise than `any`
+  as?: T; // The type of `as` is now inferred correctly based on the `T` type
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
-  [key: string]: any;
-}) {
+} & React.ComponentProps<T>) { // `otherProps` will have the correct props for `Component`
   return (
     <Component
       className={cn(
@@ -40,7 +37,7 @@ export function Button({
       style={{
         borderRadius: borderRadius,
       }}
-      {...otherProps}
+      {...otherProps} // Spread the correct props for the component
     >
       <div
         className="absolute inset-0"
@@ -71,6 +68,7 @@ export function Button({
   );
 }
 
+// Define the MovingBorder component
 export const MovingBorder = ({
   children,
   duration = 2000,
