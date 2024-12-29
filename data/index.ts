@@ -195,7 +195,7 @@ export const workExperience = [
   {
     id: 4,
     title: "Deployment and Version Control",
-    desc: "Deployed applications on platforms like Heroku , Vercel and Netlify. Managed project using Git and GitHub, collaborating on team projects and maintaining code ",
+    desc: "Deployed applications on platforms like Heroku , Vercel and Netlify. Managed project versions using Git and GitHub, collaborating on team projects and maintaining code repositories.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

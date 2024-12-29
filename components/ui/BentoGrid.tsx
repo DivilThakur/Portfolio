@@ -8,6 +8,7 @@ import animationData from '@/data/Confetti.json'
 import MagicButton from "../MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 
+
 export const BentoGrid = ({
   className,
   children,
@@ -141,3 +142,4 @@ export const BentoGridItem = ({
     </div>
   );
 };
+

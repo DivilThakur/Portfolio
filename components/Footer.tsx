@@ -23,7 +23,7 @@ const Footer = () => {
                     />
                 </a>
             </div>
-            <div className='flex mt-16 gap-3 md:gap-0 md:flex-row flex-col justify-between items-center  overflow-hidden  '>
+            <div className='flex mt-24 gap-3 md:gap-0 md:flex-row flex-col justify-between items-center  overflow-hidden  '>
                 <p className='md:text-base text-sm md:font-normal font-light text-white-200'>Copyright ©️ 2024 Divil</p>
                 <div className='flex items-center md:gap-3 gap-6 '>
                     {socialMedia.map((profile)=>(
