@@ -7,7 +7,7 @@ import { useState } from "react";
 import animationData from '@/data/Confetti.json'
 import MagicButton from "../MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
-
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -70,13 +70,13 @@ export const BentoGridItem = ({
         <div className="w-full h-full absolute overflow-hidden" >
           {
             img && (
-              <img src={img} alt={img} className={cn(imgClassName, 'object-cover,object-center')} />
+              <Image width={10} height={10} src={img} alt={img} className={cn(imgClassName, 'object-cover,object-center')} />
             )
           }
         </div>
         <div className={`absolute right-0 -bottom-5 ${id === 5 && 'w-full opacity-80 '} `}>
           {spareImg && (
-            <img src={spareImg} alt={spareImg} className="object-cover object-center w-full h-full"/>
+            <Image width={10} height={10} layout="responsive"   src={spareImg} alt={spareImg} className="object-cover object-center w-full h-full"/>
           )}
         </div>
 
