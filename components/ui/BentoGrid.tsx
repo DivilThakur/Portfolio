@@ -70,7 +70,7 @@ export const BentoGridItem = ({
         <div className="w-full h-full absolute overflow-hidden" >
           {
             img && (
-              <Image width={10} height={10} src={img} alt={img} className={cn(imgClassName, 'object-cover,object-center')} />
+              <Image width={10} height={10} layout="responsive" src={img} alt={img} className={cn(imgClassName, 'object-cover,object-center')} />
             )
           }
         </div>
