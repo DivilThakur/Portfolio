@@ -17,7 +17,7 @@ import NavLinks from "./NavLinks";
 
 const Header = () => {
   return (
-    <header className="xl:hidden  absolute z-40 left-0 top-0 right-0 ">
+    <header className="xl:hidden  ">
       <div className="container mx-auto ">
         <div className="flex items-center justify-between py-6">
           {/* logo  */}

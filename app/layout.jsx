@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={` ${somtypeMono.variable} antialiased overflow-hidden relative`}
+        className={` ${somtypeMono.variable} antialiased overflow-x-hidden relative`}
       >
         <Gradient />
         {/* <RectangleTransition /> */}
