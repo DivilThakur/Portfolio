@@ -55,9 +55,18 @@ const projects = [
     github: "https://github.com/DivilThakur/DiscordBot",
     tech: ["HTML", "CSS ", "JavaScript"],
   },
-
   {
     id: 5,
+    category: "Fullstack",
+    title: "Text To Image SAAS",
+    description: "",
+    image: "/assets/work/TextToImg.png",
+    link: "https://ai-project-blue.vercel.app/",
+    github: "https://github.com/DivilThakur/TextToImage",
+    tech: ["React", "Node ", "MongoDB", "Clipdrop API"],
+  },
+  {
+    id: 6,
     category: "Fullstack",
     title: "E-Learnign Platform",
     description: "",
@@ -67,7 +76,7 @@ const projects = [
     tech: ["React", "Node ", "MongoDB"],
   },
   {
-    id: 6,
+    id: 7,
     category: "Fullstack",
     title: "Realtime Chat-App",
     description: "",
@@ -76,16 +85,7 @@ const projects = [
     github: "https://github.com/DivilThakur/Fullstack-Chat-App",
     tech: ["Node", "Socket.IO ", "React"],
   },
-  {
-    id: 7,
-    category: "Fullstack",
-    title: "Text To Image SAAS",
-    description: "",
-    image: "/assets/work/TextToImg.png",
-    link: "https://ai-project-blue.vercel.app/",
-    github: "https://github.com/DivilThakur/TextToImage",
-    tech: ["React", "Node ", "MongoDB", "Clipdrop API"],
-  },
+
   {
     id: 8,
     category: "Frontend",
