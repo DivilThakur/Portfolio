@@ -33,7 +33,7 @@ const projects = [
     image: "/assets/work/foodDel.png",
     link: "https://food-delivery-roan-one.vercel.app",
     github: "https://github.com/DivilThakur/Food-Delivery",
-    tech: ["React.js", "Node.js", "Framer-Motion", "MongoDb"],
+    tech: ["React.js", "Node.js", "Docker", "Redis", "Cloudinary"],
   },
   {
     id: 3,
@@ -48,13 +48,14 @@ const projects = [
   {
     id: 4,
     category: "Backend",
-    title: "Ingestion Api",
+    title: "Discord Bot",
     description: "",
-    image: "/assets/work/backend.png",
-    link: "https://data-ingestion-api-production-da2f.up.railway.app",
-    github: "https://github.com/DivilThakur/data-ingestion-api",
-    tech: ["Node.js", "Express.js", "UUID", "JEST"],
+    image: "/assets/work/DiscordBot.png",
+    link: "https://github.com/DivilThakur/DiscordBot",
+    github: "https://github.com/DivilThakur/DiscordBot",
+    tech: ["HTML", "CSS ", "JavaScript"],
   },
+
   {
     id: 5,
     category: "Fullstack",
@@ -94,6 +95,16 @@ const projects = [
     link: "https://divilthakur.github.io/Quiz_Game/",
     github: "https://github.com/DivilThakur/Quiz_Game",
     tech: ["HTML", "CSS ", "JavaScript"],
+  },
+  {
+    id: 9,
+    category: "Backend",
+    title: "Ingestion Api",
+    description: "",
+    image: "/assets/work/backend.png",
+    link: "https://data-ingestion-api-production-da2f.up.railway.app",
+    github: "https://github.com/DivilThakur/data-ingestion-api",
+    tech: ["Node.js", "Express.js", "UUID", "JEST"],
   },
 ];
 
