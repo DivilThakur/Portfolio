@@ -31,7 +31,7 @@ const projects = [
     title: "Food Delivery Website",
     description: "",
     image: "/assets/work/foodDel.png",
-    link: "https://food-delivery-roan-one.vercel.app",
+    link: "https://food-delivery-client-chi.vercel.app/",
     github: "https://github.com/DivilThakur/Food-Delivery",
     tech: ["React.js", "Node.js", "Docker", "Redis", "Cloudinary"],
   },
