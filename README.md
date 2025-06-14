@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💼 Divil — Developer Portfolio Website
 
-## Getting Started
+A modern, responsive, and fully functional portfolio website built with **Next.js 14**, **shadcn/ui**, and **Tailwind CSS**. This project showcases my **services**, **projects**, and includes an integrated **contact form** with **EmailJS** to receive client inquiries directly to my email.
 
-First, run the development server:
+Live Demo: [🌐 View Website](https://myportfolio-delta-orcin.vercel.app/)
 
-```bash
+
+
+## 📸 Overview
+
+This portfolio is designed to:
+- Highlight my **frontend/backend/UI** development services
+- Showcase my **featured projects** with live previews and GitHub links
+- Allow visitors to **download my resume**
+- Provide a seamless way for clients to **contact me directly**
+
+
+
+## 🔧 Tech Stack
+
+| Category        | Tools / Frameworks                               |
+|----------------|--------------------------------------------------|
+| **Frontend**    | Next.js (App Router), React, Tailwind CSS        |
+| **UI Components** | shadcn/ui, Lucide Icons, Framer Motion          |
+| **Animations**  | GSAP, Tailwind Transitions                       |
+| **Forms & Emails** | EmailJS for contact form email delivery         |
+| **Deployment**  | Vercel (Recommended), Render (optional)          |
+
+
+
+## 🧠 Features
+
+✅ Clean modern UI with a developer-centric theme  
+✅ Project filtering by tags (Fullstack, Frontend, Backend, UI/UX)  
+✅ Contact form integrated with EmailJS  
+✅ Live project links and GitHub repo buttons  
+✅ Mobile responsive and performance optimized  
+✅ Resume download with one click
+
+---
+
+## 🚀 Getting Started
+```
+git clone https://github.com/your-username/your-portfolio.git
+cd your-portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🙋‍♂️ Author
+Made with ❤️ by Divil Thakur
+📫 divilthkr3@gmail.com
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🌟 Support
+If you like this project, leave a ⭐ on GitHub
+For freelance inquiries or collaborations, feel free to reach out!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
